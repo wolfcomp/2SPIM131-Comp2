@@ -50,12 +50,20 @@ public unsafe struct InventoryContainerComponent : IComponentData
 
         return ret;
     }
+
+    public static InventoryContainerComponent CreateDefault(InventoryType type, int size) => new InventoryContainerComponent
+    {
+        InventoryType = type,
+        Items = InventoryItemComponent.CreateNewArray(size),
+        ItemsCount = size
+    };
 }
 
 public struct InventoryItemComponent : IComponentData
 {
     public uint ItemId;
     public uint Count;
+    public Utf16StringComponent Name;
 
     public static unsafe InventoryItemComponent* CreateNewArray(int size)
     {
