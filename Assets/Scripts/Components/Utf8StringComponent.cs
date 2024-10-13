@@ -10,6 +10,28 @@ public unsafe struct Utf16StringComponent
     public bool IsUsingInlineArray;
     public fixed char InlineArray[64];
 
+    public Utf16StringComponent(string vName)
+    {
+        IsUsingInlineArray = true;
+        BufferSize = 64;
+        Length = vName.Length;
+        IsEmpty = Length == 0;
+        if (Length > BufferSize)
+        {
+            IsUsingInlineArray = false;
+            StringPointer = (char*)Marshal.AllocHGlobal(Length);
+            vName.ToCharArray().CopyTo(new Span<char>(StringPointer, Length));
+        }
+        else
+        {
+            fixed (char* inline = InlineArray)
+            {
+                vName.ToCharArray().CopyTo(new Span<char>(inline, 64));
+                StringPointer = inline;
+            }
+        }
+    }
+
     public override string ToString() => new(new ReadOnlySpan<char>(StringPointer, Length));
 
     public void SetString(string s)
