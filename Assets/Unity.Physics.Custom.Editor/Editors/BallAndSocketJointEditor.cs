@@ -2,7 +2,6 @@
 
 using Unity.Physics.Authoring;
 using UnityEditor;
-using UnityEngine;
 
 namespace Unity.Physics.Editor
 {

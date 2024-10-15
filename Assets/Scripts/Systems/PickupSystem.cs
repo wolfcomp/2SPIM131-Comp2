@@ -1,5 +1,4 @@
-﻿using System;
-using Unity.Assertions;
+﻿using Unity.Assertions;
 using Unity.Entities;
 using Unity.Physics.Stateful;
 using Unity.Physics.Systems;

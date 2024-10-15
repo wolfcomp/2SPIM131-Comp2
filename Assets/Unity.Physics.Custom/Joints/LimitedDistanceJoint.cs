@@ -1,4 +1,3 @@
-using Unity.Entities;
 using static Unity.Physics.Math;
 
 namespace Unity.Physics.Authoring
