@@ -1,12 +1,9 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
+using JetBrains.Annotations;
 using Unity.Entities;
-using UnityEngine;
-using UnityEngine.UIElements;
 
 public partial class HotbarUIInventorySystem : SystemBase
 {
+    [CanBeNull]
     private HotbarUIBehaviour _hotbarCanvas;
 
     protected override void OnCreate()
@@ -18,6 +15,17 @@ public partial class HotbarUIInventorySystem : SystemBase
     {
         var player = SystemAPI.GetSingletonEntity<Player>();
         var inventoryComponent = SystemAPI.GetComponentRO<InventoryComponent>(player);
+        if (!inventoryComponent.IsValid || _hotbarCanvas == null) return;
+        var container = inventoryComponent.ValueRO.ContainersSpan.GetRef(t => t.InventoryType == InventoryType.Hotbar);
+        for (var i = 0; i < container.ItemsSpan.Length; i++)
+        {
+            var item = container.ItemsSpan.GetRef(i);
+            _hotbarCanvas.AddUI(i);
+            if (item.ItemId == 0) continue;
+            _hotbarCanvas.SetIcon(i, item.SpriteIndex);
+            if (item.Count > 1)
+                _hotbarCanvas.SetText(i, item.Count.ToString());
+        }
     }
 
     public void AttachUI(HotbarUIBehaviour hotbarCanvas)

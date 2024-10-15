@@ -1,10 +1,6 @@
-using System.Collections;
 using System.Collections.Generic;
-using TMPro;
-using Unity.VisualScripting;
+using Unity.Entities;
 using UnityEngine;
-using UnityEngine.Rendering;
-using UnityEngine.UIElements;
 
 public class HotbarUIBehaviour : MonoBehaviour
 {
@@ -17,27 +13,39 @@ public class HotbarUIBehaviour : MonoBehaviour
     private HotbarSlotUIBehaviour _hotbarSlot;
 
     [SerializeField]
-    private Dictionary<int, GameObject> _hotbarSlots;
+    private readonly Dictionary<int, HotbarSlotUIBehaviour> _hotbarSlots = new();
 
     [SerializeField]
-    private SerializedDictionary<int, Sprite> _icons = new ();
-
+    private List<Sprite> _icons = new();
+    
     void Start()
     {
+        var entitySystem = World.DefaultGameObjectInjectionWorld.GetOrCreateSystemManaged<HotbarUIInventorySystem>();
+        entitySystem.AttachUI(this);
     }
 
-    void AddUI(int index)
+    public void AddUI(int index)
     {
-
+        if (_hotbarSlots.ContainsKey(index))
+            return;
+        var slot = Instantiate(HotbarSlot, HotbarCanvas.transform);
+        slot.UpdateOffset(index);
+        _hotbarSlots.Add(index, slot);
     }
 
-    void SetIcon(int index, uint iconIndex)
+    public void SetIcon(int index, uint iconIndex)
     {
-
+        if (!_icons.TryGetValue((int)iconIndex, out var icon))
+            return;
+        if (!_hotbarSlots.TryGetValue(index, out var slot))
+            return;
+        slot.SetImage(icon);
     }
 
-    void SetText(int index, string text)
+    public void SetText(int index, string text)
     {
-
+        if (!_hotbarSlots.TryGetValue(index, out var slot))
+            return;
+        slot.SetText(text);
     }
 }

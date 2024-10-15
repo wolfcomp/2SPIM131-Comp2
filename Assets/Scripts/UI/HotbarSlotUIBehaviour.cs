@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using TMPro;
+﻿using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -18,5 +13,12 @@ public class HotbarSlotUIBehaviour : MonoBehaviour
 
     public void SetText(string text) => _text.text = text;
     public void SetImage(Sprite sprite) => _image.sprite = sprite;
-    public float NextOffset() => _rectTransform.rect.x + _rectTransform.rect.width + 7;
+    public float GetOffset(int index) => 34 + 47 * index;
+
+    public void UpdateOffset(int index)
+    {
+        var position = _rectTransform.localPosition;
+        Debug.Log(_rectTransform.offsetMin);
+        _rectTransform.localPosition = new Vector3(GetOffset(index), position.y, position.z);
+    }
 }
