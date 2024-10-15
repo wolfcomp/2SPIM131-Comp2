@@ -8,4 +8,5 @@ public class ItemComponentScriptableObject : ScriptableObject
     public uint ItemId;
     public uint Count;
     public string Name;
+    public uint SpriteIndex;
 }

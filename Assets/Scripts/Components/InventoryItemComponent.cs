@@ -6,6 +6,7 @@ public struct InventoryItemComponent : IComponentData
 {
     public uint ItemId;
     public uint Count;
+    public uint SpriteIndex;
     public Utf16StringComponent Name;
 
     public static unsafe InventoryItemComponent* CreateNewArray(int size)
@@ -26,7 +27,8 @@ public struct InventoryItemComponent : IComponentData
         {
             ItemId = v.ItemId,
             Count = v.Count,
-            Name = new Utf16StringComponent(v.Name)
+            Name = new Utf16StringComponent(v.Name),
+            SpriteIndex = v.SpriteIndex,
         };
     }
 }
