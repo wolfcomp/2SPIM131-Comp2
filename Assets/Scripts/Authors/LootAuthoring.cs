@@ -21,7 +21,10 @@ public class LootAuthoring : MonoBehaviour
                 container.Items[i] = authoring.Items[i];
             }
             AddComponent(entity, container);
-            AddBuffer<StatefulTriggerEvent>(entity);
+            AddComponent(entity, new LootComponent
+            {
+                IsInPickupRange = false
+            });
         }
     }
 }

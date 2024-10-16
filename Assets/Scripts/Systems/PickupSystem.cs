@@ -35,6 +35,7 @@ public partial class PickupSystem : SystemBase
         var nonTriggerMask = _nonTriggerMask;
 
         var playerLookup = GetComponentLookup<PlayerComponent>();
+        var lootLookup = GetComponentLookup<LootComponent>();
 
         foreach (var (eventBuffer, _, entity) in SystemAPI.Query<DynamicBuffer<StatefulTriggerEvent>, RefRO<Loot>>().WithEntityAccess())
         {
@@ -45,10 +46,12 @@ public partial class PickupSystem : SystemBase
                     continue;
 
                 var playerInfo = playerLookup[otherEntity];
+                var lootInfo = lootLookup[entity];
 
-                playerInfo.CanPickup = triggerEvent.State == StatefulEventState.Enter;
+                lootInfo.IsInPickupRange = playerInfo.CanPickup = triggerEvent.State == StatefulEventState.Enter;
 
                 commandBuffer.SetComponent(otherEntity, playerInfo);
+                commandBuffer.SetComponent(entity, lootInfo);
             }
         }
     }

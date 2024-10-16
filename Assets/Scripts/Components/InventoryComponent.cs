@@ -1,7 +1,7 @@
 using System;
 using Unity.Entities;
 
-[ChunkSerializable] 
+[ChunkSerializable]
 public unsafe struct InventoryComponent : IComponentData
 {
     public InventoryContainerComponent* Containers;
@@ -24,6 +24,22 @@ public unsafe struct InventoryComponent : IComponentData
             ContainerCount = 2,
             Containers = containerComponent
         };
+    }
+
+    public void AddItem(InventoryItemComponent item)
+    {
+        foreach (var container in ContainersSpan)
+        {
+            for (var j = 0; j < container.ItemsSpan.Length; j++)
+            {
+                if ((container.ItemsSpan[j].ItemId != 0 && container.ItemsSpan[j].ItemId != item.ItemId) || item.ItemId == 0) continue;
+                container.ItemsSpan[j].ItemId = item.ItemId;
+                container.ItemsSpan[j].Count += item.Count;
+                container.ItemsSpan[j].SpriteIndex = item.SpriteIndex;
+                container.ItemsSpan[j].Name = item.Name;
+                return;
+            }
+        }
     }
 }
 

@@ -23,12 +23,14 @@ public partial class InputSystem : SystemBase
         bool inventory = _Input.Player.Inventory.WasPressedThisFrame();
         bool didInteract = _Input.Player.Interact.WasPressedThisFrame();
         bool isInteracting = _Input.Player.Interact.IsPressed();
+        bool isShooting = _Input.Player.Shoot.IsPressed();
         SystemAPI.SetSingleton(new InputComponent
         {
             MVector = (float2)mVector,
             DidInteract = didInteract,
             Inventory = inventory,
-            IsInteracting = isInteracting
+            IsInteracting = isInteracting,
+            IsShooting = isShooting
         });
     }
     
