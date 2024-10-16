@@ -33,34 +33,18 @@ public partial struct MovementSystem : ISystem
         _movementComponent = _entityManager.GetComponentData<MovementComponent>(_playerEntity);
         _inputComponent = _entityManager.GetComponentData<InputComponent>(_inputEntity);
         
-        LocalTransform playerTransform = _entityManager.GetComponentData<LocalTransform>(_playerEntity);
-        Move(ref state, ref playerTransform);
+        Move(ref state);
         Interact(ref state);
         Inventory(ref state);
         
 
     }
-
     [BurstCompile]
-    private void Move(ref SystemState state, ref LocalTransform playerTransform)
+    private void Move(ref SystemState state)
     {
-        
-        playerTransform.Position += new float3(_inputComponent.MVector * _movementComponent.MoveSpeed * SystemAPI.Time.DeltaTime, 0);
-        
-        //physics
-        _physicsWorld = SystemAPI.GetSingleton<PhysicsWorldSingleton>();
-        NativeList<ColliderCastHit> _hits = new NativeList<ColliderCastHit>(Allocator.Temp);
-        float3 point1 = new float3(playerTransform.Position - playerTransform.Right() * 0.15f);
-        float3 point2 = new float3(playerTransform.Position + playerTransform.Right() * 0.15f);
-
-        _physicsWorld.CapsuleCastAll(point1, point2, _movementComponent.Height / 2, float3.zero, 1f, ref _hits, new CollisionFilter
-        {
-            BelongsTo = (uint)CollisionLayers.Player,
-            CollidesWith = (uint)CollisionLayers.Water
-        });
-        
-        _entityManager.SetComponentData(_playerEntity, playerTransform);
-        _hits.Dispose();
+        var _physicsV = SystemAPI.GetComponentRW<PhysicsVelocity>(_playerEntity);
+        _physicsV.ValueRW.Linear += new float3(_inputComponent.MVector * _movementComponent.MoveSpeed 
+                                                                       * _movementComponent.MoveMultiplier * SystemAPI.Time.DeltaTime, 0);
     }
 
     private void Interact(ref SystemState state)
