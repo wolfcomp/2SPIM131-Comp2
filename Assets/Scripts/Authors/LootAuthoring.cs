@@ -21,7 +21,6 @@ public class LootAuthoring : MonoBehaviour
                 container.Items[i] = authoring.Items[i];
             }
             AddComponent(entity, container);
-            AddBuffer<StatefulTriggerEvent>(entity);
         }
     }
 }
