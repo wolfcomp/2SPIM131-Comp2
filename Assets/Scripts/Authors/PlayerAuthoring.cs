@@ -10,6 +10,10 @@ public class PlayerAuthoring : MonoBehaviour
         {
             var entity = GetEntity(TransformUsageFlags.Dynamic);
             AddComponent<Player>(entity);
+            AddComponent(entity, new PlayerComponent
+            {
+                CanPickup = false
+            });
         }
     }
 }
