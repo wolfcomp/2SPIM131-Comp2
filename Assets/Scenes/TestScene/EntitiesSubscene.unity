@@ -159,6 +159,7 @@ MonoBehaviour:
   Drag: 15
   Height: 2
   Width: 1
+  EasterEggMode: 0
 --- !u!70 &1028314686
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -303,7 +304,6 @@ GameObject:
   - component: {fileID: 1173099885}
   - component: {fileID: 1173099890}
   - component: {fileID: 1173099892}
-  - component: {fileID: 1173099893}
   - component: {fileID: 1173099891}
   m_Layer: 0
   m_Name: Chest
@@ -692,23 +692,6 @@ MonoBehaviour:
     Tag05: 0
     Tag06: 0
     Tag07: 0
---- !u!114 &1173099893
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1173099884}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 84288bd38b7104d4786d50cca659edfa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  InventoryType: 2000
-  Size: 10
-  Items:
-  - {fileID: 11400000, guid: 4b4dd9b42d5ada6459b108fc1bb2de31, type: 2}
-  - {fileID: 11400000, guid: 1bcba535e5c75084984fc4c40bbf8a53, type: 2}
 --- !u!1 &1833883173
 GameObject:
   m_ObjectHideFlags: 0
@@ -1025,6 +1008,7 @@ MonoBehaviour:
   Drag: 15
   Height: 2
   Width: 1
+  EasterEggMode: 0
 --- !u!50 &1833883190
 Rigidbody2D:
   serializedVersion: 4
