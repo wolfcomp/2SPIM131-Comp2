@@ -15,8 +15,6 @@ public class PlayerAuthoring : MonoBehaviour
             });
             var inventory = InventoryComponent.CreateDefault();
             AddComponent(entity, inventory);
-            inventory.ContainersSpan[0].ItemsSpan[0].ItemId = 1;
-            inventory.ContainersSpan[0].ItemsSpan[0].Count = 1;
         }
     }
 }

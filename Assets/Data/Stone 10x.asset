@@ -10,8 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ea3cba6d836a05a45a50e18b4af1e512, type: 3}
-  m_Name: Copper
+  m_Name: Stone 10x
   m_EditorClassIdentifier: 
   ItemId: 2
-  Count: 1
-  Name: Copper
+  Count: 10
+  Name: Stone
+  SpriteIndex: 2
