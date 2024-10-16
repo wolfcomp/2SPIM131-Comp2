@@ -2,6 +2,6 @@ using Unity.Entities;
 
 public struct HealthComponent : IComponentData
 {
-    public float MaxHealth;
-    public float Health;
+    public byte MaxHealth;
+    public byte Health;
 }

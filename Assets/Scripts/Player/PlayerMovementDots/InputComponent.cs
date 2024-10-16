@@ -7,5 +7,5 @@ public partial struct InputComponent : IComponentData
     public bool IsInteracting;
     public bool DidInteract;
     public bool Inventory;
-    
+    public bool IsShooting;
 }

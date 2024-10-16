@@ -19,7 +19,7 @@ public partial class HealthSystem : SystemBase
     protected override void OnUpdate()
     {
         var player = SystemAPI.GetSingletonEntity<Player>();
-        var component = SystemAPI.GetComponentRO<PlayerComponent>(player);
+        var component = SystemAPI.GetComponentRO<HealthComponent>(player);
         if (!component.IsValid || _healthBehaviour == null) return;
         _healthBehaviour.Initialize(component.ValueRO.MaxHealth);
         _healthBehaviour.UpdateHealth(component.ValueRO.Health);

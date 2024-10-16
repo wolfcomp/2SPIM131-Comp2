@@ -21,6 +21,10 @@ public class LootAuthoring : MonoBehaviour
                 container.Items[i] = authoring.Items[i];
             }
             AddComponent(entity, container);
+            AddComponent(entity, new LootComponent
+            {
+                IsInPickupRange = false
+            });
         }
     }
 }

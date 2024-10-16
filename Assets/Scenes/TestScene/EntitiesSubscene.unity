@@ -159,8 +159,7 @@ MonoBehaviour:
   Size: 10
   Items:
   - {fileID: 11400000, guid: 4b4dd9b42d5ada6459b108fc1bb2de31, type: 2}
-  - {fileID: 11400000, guid: 57f85a132b922564ea40a652a9793450, type: 2}
-  - {fileID: 11400000, guid: 1a180c7515b1c6c41ab40a1b1de2c4fa, type: 2}
+  - {fileID: 11400000, guid: 1bcba535e5c75084984fc4c40bbf8a53, type: 2}
 --- !u!212 &1173099888
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -248,7 +247,7 @@ MonoBehaviour:
   m_PrimitiveSize:
     x: 1.5
     y: 1.5
-    z: 0
+    z: 1
   m_PrimitiveOrientation:
     Value:
       x: 0
@@ -260,7 +259,7 @@ MonoBehaviour:
     Radius: 0.75
     Axis: 1
   m_Cylinder:
-    Height: 0
+    Height: 1
     Radius: 0.75
     Axis: 2
   m_CylinderSideCount: 20
@@ -445,6 +444,7 @@ GameObject:
   - component: {fileID: 1833883175}
   - component: {fileID: 1833883174}
   - component: {fileID: 1833883176}
+  - component: {fileID: 1833883179}
   - component: {fileID: 1833883177}
   - component: {fileID: 1833883178}
   m_Layer: 0
@@ -515,7 +515,7 @@ Transform:
   m_GameObject: {fileID: 1833883173}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.05, y: 5.42, z: 0}
+  m_LocalPosition: {x: 3.34, y: 5.44, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -534,6 +534,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHealth: 6
+  ShotPrefab: {fileID: 4594536776611548902, guid: 9bbb868647c6c944580e6838d8960c2b, type: 3}
+  ShotCooldown: 0.3
 --- !u!114 &1833883177
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -554,7 +556,7 @@ MonoBehaviour:
   m_PrimitiveSize:
     x: 2
     y: 1
-    z: 0
+    z: 1
   m_PrimitiveOrientation:
     Value:
       x: 0
@@ -566,9 +568,9 @@ MonoBehaviour:
     Radius: 0.5
     Axis: 0
   m_Cylinder:
-    Height: 0
-    Radius: 1
-    Axis: 2
+    Height: 2
+    Radius: 0.5
+    Axis: 0
   m_CylinderSideCount: 20
   m_SphereRadius: 1
   m_MinimumSkinnedVertexWeight: 0.1
@@ -728,6 +730,23 @@ MonoBehaviour:
     Tag05: 0
     Tag06: 0
     Tag07: 0
+--- !u!114 &1833883179
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1833883173}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e26148df91314844cbb2a1801e3ea517, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MoveSpeed: 7
+  MoveMultiplier: 10
+  Drag: 15
+  Height: 2
+  Width: 1
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
