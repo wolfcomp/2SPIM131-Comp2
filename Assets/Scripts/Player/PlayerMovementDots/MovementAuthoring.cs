@@ -9,17 +9,20 @@ public class MovementAuthoring : MonoBehaviour
     public float Drag    = 15f;
     public float Height  = 2f;
     public float Width   = 1f;
+    public bool EasterEggMode;
 
     public class MovementAuthoringBaker : Baker<MovementAuthoring>
     {
         public override void Bake(MovementAuthoring authoring)
         {
             Entity playerAuthoring = GetEntity(TransformUsageFlags.Dynamic);
-            AddComponent(playerAuthoring, new MovementComponent{MoveSpeed = authoring.MoveSpeed, 
+            AddComponent(playerAuthoring, new MovementComponent{
+                MoveSpeed = authoring.MoveSpeed, 
                 MoveMultiplier = authoring.MoveMultiplier, 
                 Drag = authoring.Drag,
                 Height = authoring.Height,
-                Width = authoring.Width
+                Width = authoring.Width,
+                EasterEggMode = authoring.EasterEggMode
             });
         }
     }
@@ -32,5 +35,5 @@ public struct MovementComponent : IComponentData
     public float Drag;
     public float Height;
     public float Width;
-
+    public bool EasterEggMode;
 }
