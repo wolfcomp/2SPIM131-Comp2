@@ -3,6 +3,9 @@ using UnityEngine;
 
 public class PlayerAuthoring : MonoBehaviour
 {
+    [SerializeField]
+    public byte MaxHealth;
+
     class Baker : Baker<PlayerAuthoring>
     {
         public override void Bake(PlayerAuthoring authoring)
@@ -11,7 +14,10 @@ public class PlayerAuthoring : MonoBehaviour
             AddComponent<Player>(entity);
             AddComponent(entity, new PlayerComponent
             {
-                CanPickup = false
+                CanPickup = false,
+                MaxHealth = authoring.MaxHealth,
+                Health = authoring.MaxHealth,
+                InvulnDelta = 0
             });
             var inventory = InventoryComponent.CreateDefault();
             AddComponent(entity, inventory);

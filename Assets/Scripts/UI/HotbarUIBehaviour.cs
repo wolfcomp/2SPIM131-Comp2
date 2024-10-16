@@ -13,10 +13,9 @@ public class HotbarUIBehaviour : MonoBehaviour
     private HotbarSlotUIBehaviour _hotbarSlot;
 
     [SerializeField]
-    private readonly Dictionary<int, HotbarSlotUIBehaviour> _hotbarSlots = new();
-
-    [SerializeField]
     private List<Sprite> _icons = new();
+
+    private readonly Dictionary<int, HotbarSlotUIBehaviour> _hotbarSlots = new();
     
     void Start()
     {
@@ -24,6 +23,10 @@ public class HotbarUIBehaviour : MonoBehaviour
         entitySystem.AttachUI(this);
     }
 
+    /// <summary>
+    /// Adds a slot to the Hotbar UI
+    /// </summary>
+    /// <param name="index">The index of the slot to spawn</param>
     public void AddUI(int index)
     {
         if (_hotbarSlots.ContainsKey(index))
@@ -33,6 +36,11 @@ public class HotbarUIBehaviour : MonoBehaviour
         _hotbarSlots.Add(index, slot);
     }
 
+    /// <summary>
+    /// Sets the icon of the specified <paramref name="index"/> to the specified <paramref name="iconIndex"/> based on the Sprite list of this object
+    /// </summary>
+    /// <param name="index">The index of the slot to modify</param>
+    /// <param name="iconIndex">The index of the sprite to set</param>
     public void SetIcon(int index, uint iconIndex)
     {
         if (!_icons.TryGetValue((int)iconIndex, out var icon))
@@ -42,6 +50,11 @@ public class HotbarUIBehaviour : MonoBehaviour
         slot.SetImage(icon);
     }
 
+    /// <summary>
+    /// Sets the text of the specified <paramref name="index"/> to the specified <paramref name="text"/>
+    /// </summary>
+    /// <param name="index">The index of the slot to modify</param>
+    /// <param name="text">The text to set on the slot</param>
     public void SetText(int index, string text)
     {
         if (!_hotbarSlots.TryGetValue(index, out var slot))

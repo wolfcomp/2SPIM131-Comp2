@@ -197,10 +197,10 @@ TextureImporter:
       name: Inventory_Spritesheet_8
       rect:
         serializedVersion: 2
-        x: 225
-        y: 324
-        width: 11
-        height: 12
+        x: 224
+        y: 288
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -215,34 +215,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Inventory_Spritesheet_9
-      rect:
-        serializedVersion: 2
-        x: 260
-        y: 324
-        width: 11
-        height: 12
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 47cc0ab8a9c841f488b0235b89aec497
-      internalID: -542854002
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Inventory_Spritesheet_10
       rect:
         serializedVersion: 2
-        x: 273
-        y: 324
-        width: 11
-        height: 12
+        x: 272
+        y: 288
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -257,34 +236,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Inventory_Spritesheet_11
-      rect:
-        serializedVersion: 2
-        x: 308
-        y: 324
-        width: 11
-        height: 12
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: cdd45524be654394cab700a4d2c98add
-      internalID: 1681271910
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Inventory_Spritesheet_12
       rect:
         serializedVersion: 2
-        x: 321
-        y: 324
-        width: 11
-        height: 12
+        x: 320
+        y: 288
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -299,28 +257,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Inventory_Spritesheet_13
-      rect:
-        serializedVersion: 2
-        x: 356
-        y: 324
-        width: 11
-        height: 12
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7cd2d8c0121b73141bab92cdc1051850
-      internalID: -116790149
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Inventory_Spritesheet_14
+      name: Heart_Small_32
       rect:
         serializedVersion: 2
         x: 0
@@ -341,7 +278,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Inventory_Spritesheet_15
+      name: Heart_Half_Small_32
       rect:
         serializedVersion: 2
         x: 32
@@ -362,7 +299,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Inventory_Spritesheet_16
+      name: Heart_Empty_Small_32
       rect:
         serializedVersion: 2
         x: 64
@@ -383,133 +320,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Inventory_Spritesheet_20
-      rect:
-        serializedVersion: 2
-        x: 225
-        y: 288
-        width: 11
-        height: 12
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a01ca6d329eda274fbe9d8b17b1b0d94
-      internalID: 1101617556
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Inventory_Spritesheet_21
-      rect:
-        serializedVersion: 2
-        x: 260
-        y: 288
-        width: 11
-        height: 12
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7a642c7894b645848ac776633ffbabdc
-      internalID: 2057396681
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Inventory_Spritesheet_22
-      rect:
-        serializedVersion: 2
-        x: 273
-        y: 288
-        width: 11
-        height: 12
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7cfa7a3db9d77fb41b897783436bf57f
-      internalID: -1831538103
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Inventory_Spritesheet_23
-      rect:
-        serializedVersion: 2
-        x: 308
-        y: 288
-        width: 11
-        height: 12
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ef3335b8cf6d25b4085630adaf1773e3
-      internalID: 1120886096
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Inventory_Spritesheet_24
-      rect:
-        serializedVersion: 2
-        x: 321
-        y: 288
-        width: 11
-        height: 12
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b182f1fe3ea2c324782cfea9ceeac80b
-      internalID: 1916408675
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Inventory_Spritesheet_25
-      rect:
-        serializedVersion: 2
-        x: 356
-        y: 288
-        width: 11
-        height: 12
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 770d25bda0563fe41bed512b4537cdd0
-      internalID: 660395480
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Inventory_Spritesheet_26
+      name: Heart_Large
       rect:
         serializedVersion: 2
         x: 0
@@ -530,7 +341,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Inventory_Spritesheet_27
+      name: Heart_Half_Large
       rect:
         serializedVersion: 2
         x: 32
@@ -551,7 +362,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Inventory_Spritesheet_28
+      name: Heart_Empty_Large
       rect:
         serializedVersion: 2
         x: 64
@@ -572,13 +383,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Inventory_Spritesheet_32
+      name: Slot_Rounded_Light
       rect:
         serializedVersion: 2
-        x: 233
-        y: 231
-        width: 30
-        height: 32
+        x: 224
+        y: 224
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -593,13 +404,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Inventory_Spritesheet_33
+      name: Slot_Rounded
       rect:
         serializedVersion: 2
-        x: 281
-        y: 231
-        width: 30
-        height: 32
+        x: 272
+        y: 224
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -614,13 +425,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Inventory_Spritesheet_34
+      name: Slot_Rounded_Dark
       rect:
         serializedVersion: 2
-        x: 329
-        y: 231
-        width: 30
-        height: 32
+        x: 320
+        y: 224
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -719,13 +530,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Inventory_Spritesheet_39
+      name: Slot_Light
       rect:
         serializedVersion: 2
-        x: 233
-        y: 183
-        width: 30
-        height: 32
+        x: 224
+        y: 176
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -740,13 +551,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Inventory_Spritesheet_40
+      name: Slot
       rect:
         serializedVersion: 2
-        x: 281
-        y: 183
-        width: 30
-        height: 32
+        x: 272
+        y: 176
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -761,13 +572,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Inventory_Spritesheet_41
+      name: Slot_Dark
       rect:
         serializedVersion: 2
-        x: 329
-        y: 183
-        width: 30
-        height: 32
+        x: 320
+        y: 176
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -824,13 +635,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Inventory_Spritesheet_44
+      name: Slot_Large_Light
       rect:
         serializedVersion: 2
-        x: 227
-        y: 130
-        width: 42
-        height: 44
+        x: 224
+        y: 128
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -845,13 +656,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Inventory_Spritesheet_45
+      name: Slot_Large
       rect:
         serializedVersion: 2
-        x: 275
-        y: 130
-        width: 42
-        height: 44
+        x: 272
+        y: 128
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -866,13 +677,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Inventory_Spritesheet_46
+      name: Slot_Large_Dark
       rect:
         serializedVersion: 2
-        x: 323
-        y: 130
-        width: 42
-        height: 44
+        x: 320
+        y: 128
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1044,15 +855,18 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
+      Heart_Empty_Large: -1671842974
+      Heart_Empty_Small_32: 881357626
+      Heart_Half_Large: -915654237
+      Heart_Half_Small_32: -767510533
+      Heart_Large: 1896474142
+      Heart_Small_32: -1218177670
       Inventory_Spritesheet_0: 797475230
       Inventory_Spritesheet_1: -965634355
       Inventory_Spritesheet_10: 1357406977
       Inventory_Spritesheet_11: 1681271910
       Inventory_Spritesheet_12: -2145734987
       Inventory_Spritesheet_13: -116790149
-      Inventory_Spritesheet_14: -1218177670
-      Inventory_Spritesheet_15: -767510533
-      Inventory_Spritesheet_16: 881357626
       Inventory_Spritesheet_17: 358854129
       Inventory_Spritesheet_18: 1720758369
       Inventory_Spritesheet_19: -84975714
@@ -1063,29 +877,17 @@ TextureImporter:
       Inventory_Spritesheet_23: 1120886096
       Inventory_Spritesheet_24: 1916408675
       Inventory_Spritesheet_25: 660395480
-      Inventory_Spritesheet_26: 1896474142
-      Inventory_Spritesheet_27: -915654237
-      Inventory_Spritesheet_28: -1671842974
       Inventory_Spritesheet_29: -1431664262
       Inventory_Spritesheet_3: -1641957383
       Inventory_Spritesheet_30: -1269974272
       Inventory_Spritesheet_31: -1916152034
-      Inventory_Spritesheet_32: -560248675
-      Inventory_Spritesheet_33: 1228403515
-      Inventory_Spritesheet_34: -1791008723
       Inventory_Spritesheet_35: -1380763606
       Inventory_Spritesheet_36: -800700592
       Inventory_Spritesheet_37: -1410095094
       Inventory_Spritesheet_38: -203947935
-      Inventory_Spritesheet_39: -755615852
       Inventory_Spritesheet_4: 366452072
-      Inventory_Spritesheet_40: 1394495557
-      Inventory_Spritesheet_41: 1804416040
       Inventory_Spritesheet_42: 485057677
       Inventory_Spritesheet_43: -1677056719
-      Inventory_Spritesheet_44: 658506450
-      Inventory_Spritesheet_45: -949665717
-      Inventory_Spritesheet_46: 90427367
       Inventory_Spritesheet_47: -163414683
       Inventory_Spritesheet_48: 2013977465
       Inventory_Spritesheet_49: 1130879304
@@ -1104,6 +906,15 @@ TextureImporter:
       Inventory_Spritesheet_7: -2080514245
       Inventory_Spritesheet_8: 2121197333
       Inventory_Spritesheet_9: -542854002
+      Slot: 1394495557
+      Slot_Dark: 1804416040
+      Slot_Large: -949665717
+      Slot_Large_Dark: 90427367
+      Slot_Large_Light: 658506450
+      Slot_Light: -755615852
+      Slot_Rounded: 1228403515
+      Slot_Rounded_Dark: -1791008723
+      Slot_Rounded_Light: -560248675
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

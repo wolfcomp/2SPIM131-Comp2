@@ -110,7 +110,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Emoji_Spritesheet_Free_0
+      name: Round_Excited
       rect:
         serializedVersion: 2
         x: 0
@@ -131,7 +131,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Emoji_Spritesheet_Free_1
+      name: Round_Happy
       rect:
         serializedVersion: 2
         x: 32
@@ -152,7 +152,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Emoji_Spritesheet_Free_2
+      name: Round_Neutral
       rect:
         serializedVersion: 2
         x: 64
@@ -173,7 +173,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Emoji_Spritesheet_Free_3
+      name: Round_Sad
       rect:
         serializedVersion: 2
         x: 96
@@ -194,7 +194,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Emoji_Spritesheet_Free_4
+      name: Round_Unhappy
       rect:
         serializedVersion: 2
         x: 128
@@ -215,7 +215,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Emoji_Spritesheet_Free_5
+      name: Round_Love
       rect:
         serializedVersion: 2
         x: 0
@@ -236,7 +236,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Emoji_Spritesheet_Free_6
+      name: Round_Incapacitated
       rect:
         serializedVersion: 2
         x: 32
@@ -257,7 +257,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Emoji_Spritesheet_Free_7
+      name: Round_Dead
       rect:
         serializedVersion: 2
         x: 64
@@ -278,7 +278,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Emoji_Spritesheet_Free_8
+      name: Round_Cry
       rect:
         serializedVersion: 2
         x: 96
@@ -299,7 +299,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Emoji_Spritesheet_Free_9
+      name: Round_Sob
       rect:
         serializedVersion: 2
         x: 128
@@ -1861,7 +1861,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1887,8 +1887,6 @@ TextureImporter:
       Apple: -355770042
       Carrot: -818352445
       Corn: 643043943
-      Emoji_Spritesheet_Free_0: 1778211556
-      Emoji_Spritesheet_Free_1: 692482016
       Emoji_Spritesheet_Free_10: -271018813
       Emoji_Spritesheet_Free_11: 135114970
       Emoji_Spritesheet_Free_12: -552892647
@@ -1899,7 +1897,6 @@ TextureImporter:
       Emoji_Spritesheet_Free_17: -1814571248
       Emoji_Spritesheet_Free_18: 272836820
       Emoji_Spritesheet_Free_19: -2081998652
-      Emoji_Spritesheet_Free_2: 1185476098
       Emoji_Spritesheet_Free_20: 272500571
       Emoji_Spritesheet_Free_21: -1082918813
       Emoji_Spritesheet_Free_22: 1178494759
@@ -1910,7 +1907,6 @@ TextureImporter:
       Emoji_Spritesheet_Free_27: 523813290
       Emoji_Spritesheet_Free_28: 417851187
       Emoji_Spritesheet_Free_29: -1697095168
-      Emoji_Spritesheet_Free_3: -1503528750
       Emoji_Spritesheet_Free_30: 359774051
       Emoji_Spritesheet_Free_31: 493878106
       Emoji_Spritesheet_Free_32: -1621034141
@@ -1921,7 +1917,6 @@ TextureImporter:
       Emoji_Spritesheet_Free_37: 46991961
       Emoji_Spritesheet_Free_38: 1649000425
       Emoji_Spritesheet_Free_39: -505325489
-      Emoji_Spritesheet_Free_4: 783111155
       Emoji_Spritesheet_Free_40: 1376292154
       Emoji_Spritesheet_Free_42: 2065065893
       Emoji_Spritesheet_Free_43: 1421475608
@@ -1931,7 +1926,6 @@ TextureImporter:
       Emoji_Spritesheet_Free_47: 1894064003
       Emoji_Spritesheet_Free_48: -887132651
       Emoji_Spritesheet_Free_49: 572117836
-      Emoji_Spritesheet_Free_5: -738858079
       Emoji_Spritesheet_Free_50: 1229339372
       Emoji_Spritesheet_Free_51: -1347695325
       Emoji_Spritesheet_Free_52: -1880830985
@@ -1942,13 +1936,11 @@ TextureImporter:
       Emoji_Spritesheet_Free_57: -1838992605
       Emoji_Spritesheet_Free_58: -2095720907
       Emoji_Spritesheet_Free_59: -694340223
-      Emoji_Spritesheet_Free_6: 678610814
       Emoji_Spritesheet_Free_60: -114620313
       Emoji_Spritesheet_Free_61: 846668892
       Emoji_Spritesheet_Free_62: 1697998809
       Emoji_Spritesheet_Free_63: 934905877
       Emoji_Spritesheet_Free_64: 1632999759
-      Emoji_Spritesheet_Free_7: -169761844
       Emoji_Spritesheet_Free_70: 196161682
       Emoji_Spritesheet_Free_74: -50329061
       Emoji_Spritesheet_Free_75: -1966761041
@@ -1956,7 +1948,6 @@ TextureImporter:
       Emoji_Spritesheet_Free_77: 1104009856
       Emoji_Spritesheet_Free_78: -1090155816
       Emoji_Spritesheet_Free_79: 54186490
-      Emoji_Spritesheet_Free_8: 918553559
       Emoji_Spritesheet_Free_80: -222749257
       Emoji_Spritesheet_Free_81: -1743062285
       Emoji_Spritesheet_Free_82: 427138408
@@ -1965,9 +1956,18 @@ TextureImporter:
       Emoji_Spritesheet_Free_85: -793978005
       Emoji_Spritesheet_Free_86: 1334803536
       Emoji_Spritesheet_Free_87: -175617570
-      Emoji_Spritesheet_Free_9: -402656677
       Empty: 2132329125
       Leaf: -993419028
+      Round_Cry: 918553559
+      Round_Dead: -169761844
+      Round_Excited: 1778211556
+      Round_Happy: 692482016
+      Round_Incapacitated: 678610814
+      Round_Love: -738858079
+      Round_Neutral: 1185476098
+      Round_Sad: -1503528750
+      Round_Sob: -402656677
+      Round_Unhappy: 783111155
       Stick: -975408707
       Stone: 1611399744
       Tomato: 708431333

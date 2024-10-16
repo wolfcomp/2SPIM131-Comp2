@@ -414,6 +414,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2f73b6c69d651a45b7691a7e94f6cb1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MaxHealth: 6
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

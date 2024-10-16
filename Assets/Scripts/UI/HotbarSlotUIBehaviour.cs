@@ -18,7 +18,6 @@ public class HotbarSlotUIBehaviour : MonoBehaviour
     public void UpdateOffset(int index)
     {
         var position = _rectTransform.localPosition;
-        Debug.Log(_rectTransform.offsetMin);
         _rectTransform.localPosition = new Vector3(GetOffset(index), position.y, position.z);
     }
 }
