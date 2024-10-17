@@ -13,9 +13,6 @@
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABQAAAIAA=</HashCode>
       <FileName>Assets\Scripts\Authors\EnemySpawnerAuthoring.cs</FileName>
     </TypeIdentifier>
-    <ShowAsCollectionAssociation>
-      <Field Name="EnemiesSOList" />
-    </ShowAsCollectionAssociation>
   </Class>
   <Class Name="InventoryContainerAuthoring">
     <Position X="18.25" Y="2.25" Width="2.25" />
@@ -87,31 +84,23 @@
   </Class>
   <Class Name="EnemyContainerComponent" BaseTypeListCollapsed="true">
     <Position X="9.5" Y="14.5" Width="2.25" />
-    <AssociationLine Name="enemies" Type="EnemyData">
-      <MemberNameLabel ManuallyPlaced="true">
-        <Position X="-0.926" Y="0.322" />
-      </MemberNameLabel>
-    </AssociationLine>
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Assets\Scripts\Components\EnemyContainerComponent.cs</FileName>
     </TypeIdentifier>
-    <ShowAsCollectionAssociation>
-      <Field Name="enemies" />
-    </ShowAsCollectionAssociation>
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
   <Class Name="Input">
     <Position X="27" Y="0.5" Width="1.75" />
     <TypeIdentifier>
-      <HashCode>AAQAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAQAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Assets\Scripts\Player\Input.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Movement">
     <Position X="37.5" Y="0.5" Width="2.25" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAEIIAAAAWAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAEAAIIAAAAQAAAAAAAAAAAAAAAAACAAAAAAAAA=</HashCode>
       <FileName>Assets\Scripts\Player\Movement.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -125,12 +114,9 @@
   <Class Name="InputSystem">
     <Position X="17" Y="24" Width="1.75" />
     <TypeIdentifier>
-      <HashCode>AAAAAIAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAEAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAIAAAAAAAAAAAAAACAAAAAAAAAAAAEAAAA=</HashCode>
       <FileName>Assets\Scripts\Player\PlayerMovementDots\InputSystem.cs</FileName>
     </TypeIdentifier>
-    <ShowAsAssociation>
-      <Field Name="_Input" />
-    </ShowAsAssociation>
   </Class>
   <Class Name="MovementAuthoring">
     <Position X="27" Y="2.5" Width="2" />
@@ -146,7 +132,7 @@
       <FileName>Assets\Scripts\Player\PlayerMovementDots\MovementAuthoring.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="EnemySO">
+  <Class Name="EnemySo">
     <Position X="21" Y="22.75" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AAAACACAAAAAABAAAgAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
@@ -163,13 +149,9 @@
   <Class Name="EnemySpawnerSystem">
     <Position X="11" Y="17" Width="5.25" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAQAAAAAAAAAAAAAAACgAAAQAAAQAAQkYAAA=</HashCode>
+      <HashCode>EAAAgAAAAAAAAIQAAAAAAAAAACAAAAAAAAAAAAEZAAE=</HashCode>
       <FileName>Assets\Scripts\Systems\EnemySpawnerSystem.cs</FileName>
     </TypeIdentifier>
-    <ShowAsAssociation>
-      <Field Name="enemySpawnerComponent" />
-      <Field Name="enemyContainerComponent" />
-    </ShowAsAssociation>
   </Class>
   <Class Name="HealthSystem">
     <Position X="10.75" Y="0.5" Width="1.75" />
@@ -248,7 +230,7 @@
   <Class Name="MeshExport">
     <Position X="34.75" Y="0.5" Width="2.5" />
     <TypeIdentifier>
-      <HashCode>AAQAAAAAACAAAAAAAAAAAAAAABABAAAAAAAAAAEAAEA=</HashCode>
+      <HashCode>AAQAAAAAACAAAAAAAAAAAAAAAAAAAIAAAQAAAAAAAEA=</HashCode>
       <FileName>Assets\Scripts\MeshExport.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -287,7 +269,7 @@
         </TypeIdentifier>
         <Lollipop Position="0.2" />
       </Struct>
-      <Struct Name="Unity.Physics.Stateful.StatefulEventCollectionJobs.ConvertEventStreamToDynamicBufferJob&lt;T, C&gt;" Collapsed="true">
+      <Struct Name="Unity.Physics.Stateful.StatefulEventCollectionJobs.ConvertEventStreamToDynamicBufferJob&lt;T, TC&gt;" Collapsed="true">
         <TypeIdentifier>
           <NewMemberFileName>Assets\Scripts\Stateful\StatefulJobs.cs</NewMemberFileName>
         </TypeIdentifier>
@@ -316,7 +298,7 @@
   <Class Name="@PlayerInputAction" Collapsed="true">
     <Position X="17" Y="22.5" Width="1.75" />
     <TypeIdentifier>
-      <HashCode>AIACAAAAACAAIBAiAAKECRAJYAIXBGAUAGEgJFhQAMA=</HashCode>
+      <HashCode>AIACAAAAACAAIBAiAAKEKRAJYAIXBGAUAGEgJFhQAMA=</HashCode>
       <FileName>Assets\Scripts\Player\PlayerInputAction.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
@@ -421,7 +403,7 @@
   <Struct Name="PlayerComponent" BaseTypeListCollapsed="true">
     <Position X="33.25" Y="8.75" Width="1.75" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAIAAAAAAAAAAAgAAIAAAAAAAAAAAAAAAQAAE=</HashCode>
+      <HashCode>AAAAAAAAIAAAAAAAAAAAgIAIAAAAAAAAAAAAAAAQAAE=</HashCode>
       <FileName>Assets\Scripts\Components\PlayerComponent.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" Collapsed="true" />
@@ -444,7 +426,7 @@
   <Struct Name="InputComponent" BaseTypeListCollapsed="true">
     <Position X="19.25" Y="14" Width="1.75" />
     <TypeIdentifier>
-      <HashCode>EAAAAAQAAAIAAAAAAAAAAAAAAAAACAAAAAAAAgAAAAA=</HashCode>
+      <HashCode>EAAACAQAAAIAAAAAAAAAAAAAAAAACAAAAAAAAgAAAAA=</HashCode>
       <FileName>Assets\Scripts\Player\PlayerMovementDots\InputComponent.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" Collapsed="true" />
@@ -460,7 +442,7 @@
   <Struct Name="MovementSystem" BaseTypeListCollapsed="true">
     <Position X="19.25" Y="17" Width="2.75" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAIAIABAAAAAAAAAAAAICAAgAQAEAACAgEAAAA=</HashCode>
+      <HashCode>AAAAAAAIAIIBAAAAAAAAAAAAICAAgAQAEAACAgEAAAA=</HashCode>
       <FileName>Assets\Scripts\Player\PlayerMovementDots\MovementSystem.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -480,7 +462,7 @@
   <Struct Name="PlayerShotSystem" BaseTypeListCollapsed="true">
     <Position X="29.25" Y="4.5" Width="1.75" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAEAAAA=</HashCode>
+      <HashCode>QAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAFAAAA=</HashCode>
       <FileName>Assets\Scripts\Systems\PlayerShotSystem.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" Collapsed="true" />
@@ -541,12 +523,9 @@
       </Struct>
     </NestedTypes>
     <TypeIdentifier>
-      <HashCode>AAABAAAAAAAAAAAIAAAAAEAAACAAAAAAAAAAAAEAAAA=</HashCode>
+      <HashCode>QAABAAAAAAAAAAAAAAAAAIAAACAAAAAAAAAAAAEAAAA=</HashCode>
       <FileName>Assets\Scripts\Stateful\StatefulCollisionEventBufferSystem.cs</FileName>
     </TypeIdentifier>
-    <ShowAsAssociation>
-      <Field Name="m_StateFulEventBuffers" />
-    </ShowAsAssociation>
     <Lollipop Position="0.2" Collapsed="true" />
   </Struct>
   <Struct Name="Unity.Physics.Stateful.StatefulSimulationEventBuffers&lt;T&gt;">
@@ -591,12 +570,9 @@
       </Struct>
     </NestedTypes>
     <TypeIdentifier>
-      <HashCode>AAIBAAAAAAAAAAAIAAAAAAAAACAAAAAAAAAAAAEAAgA=</HashCode>
+      <HashCode>AAABAAAAgAAAAAAACAAAAIAAACAAAAAAAAAAAAEAAAA=</HashCode>
       <FileName>Assets\Scripts\Stateful\StatefulTriggerEventBufferSystem.cs</FileName>
     </TypeIdentifier>
-    <ShowAsAssociation>
-      <Field Name="m_StateFulEventBuffers" />
-    </ShowAsAssociation>
     <Lollipop Position="0.2" Collapsed="true" />
   </Struct>
   <Struct Name="EnemyAISystem">
