@@ -11,7 +11,7 @@ using UnityEditor;
 [UpdateInGroup(typeof(PhysicsSystemGroup))]
 [UpdateAfter(typeof(StatefulTriggerEventBufferSystem))]
 [UpdateAfter(typeof(PlayerShotSystem))]
-public partial class EnemyAiDamageSystem : SystemBase
+public partial class EnemyAIDamageSystem : SystemBase
 {
     private EndFixedStepSimulationEntityCommandBufferSystem _commandBufferSystem;
     private EntityQuery _nonTriggerPlayerQuery;

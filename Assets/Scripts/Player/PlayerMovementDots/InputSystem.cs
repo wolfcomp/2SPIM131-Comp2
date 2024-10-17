@@ -1,7 +1,10 @@
 using Unity.Entities;
 using Unity.Mathematics;
+using Unity.Physics.Systems;
 using UnityEngine;
 
+[UpdateInGroup(typeof(PhysicsSystemGroup))]
+[UpdateBefore(typeof(PlayerShotSystem))]
 public partial class InputSystem : SystemBase
 {
     private PlayerInputAction _input;
@@ -21,7 +24,7 @@ public partial class InputSystem : SystemBase
         var didInteract = _input.Player.Interact.WasPressedThisFrame();
         var isInteracting = _input.Player.Interact.IsPressed();
         var isShooting = _input.Player.Shoot.IsPressed();
-        var rapidMode = _input.Player.RapidMode.WasPressedThisFrame();
+        var rapidMode = _input.Player.RapidMode.WasPerformedThisFrame();
         SystemAPI.SetSingleton(new InputComponent
         {
             MVector = (float2)mVector,

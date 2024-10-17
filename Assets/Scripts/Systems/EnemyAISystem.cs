@@ -2,7 +2,7 @@ using Unity.Transforms;
 using Unity.Entities;
 using Unity.Mathematics;
 
-public partial struct EnemyAiSystem : ISystem
+public partial struct EnemyAISystem : ISystem
 {
     private void OnUpdate(ref SystemState state)
     {
