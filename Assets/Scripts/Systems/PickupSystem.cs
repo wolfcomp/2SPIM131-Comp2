@@ -45,13 +45,14 @@ public partial class PickupSystem : SystemBase
                 if (triggerEvent.State == StatefulEventState.Stay || !nonTriggerMask.MatchesIgnoreFilter(otherEntity))
                     continue;
 
-                var playerInfo = playerLookup[otherEntity];
-                var lootInfo = lootLookup[entity];
+                    var playerInfo = playerLookup[otherEntity];
+                    var lootInfo = lootLookup[entity];
 
-                lootInfo.IsInPickupRange = playerInfo.CanPickup = triggerEvent.State == StatefulEventState.Enter;
+                    lootInfo.IsInPickupRange = playerInfo.CanPickup = triggerEvent.State == StatefulEventState.Enter;
 
-                commandBuffer.SetComponent(otherEntity, playerInfo);
-                commandBuffer.SetComponent(entity, lootInfo);
+                    commandBuffer.SetComponent(otherEntity, playerInfo);
+                    commandBuffer.SetComponent(entity, lootInfo);
+                
             }
         }
     }

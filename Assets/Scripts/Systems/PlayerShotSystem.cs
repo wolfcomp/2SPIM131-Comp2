@@ -6,8 +6,11 @@ using System.Threading.Tasks;
 using Unity.Collections;
 using Unity.Entities;
 using Unity.Mathematics;
+using Unity.Physics.Systems;
 using Unity.Transforms;
 using UnityEngine;
+
+[UpdateInGroup(typeof(PhysicsSystemGroup))]
 
 public partial struct PlayerShotSystem : ISystem
 {
@@ -24,12 +27,20 @@ public partial struct PlayerShotSystem : ISystem
         var inputComponent = SystemAPI.GetComponentRO<InputComponent>(inputEntity);
         var playerEntity = SystemAPI.GetSingletonEntity<Player>();
         var playerComponent = entityManager.GetComponentData<PlayerComponent>(playerEntity);
-        var newCooldown = playerComponent.ShotDelta - SystemAPI.Time.DeltaTime;
         var entityCommandBuffer = new EntityCommandBuffer(Allocator.Temp);
-        if (newCooldown > 0)
+        var updated = false;
+        if (playerComponent.ShotDelta > 0)
         {
-            Debug.Log($"Shot on cooldown: {newCooldown}");
-            playerComponent.ShotDelta = newCooldown;
+            playerComponent.ShotDelta -= SystemAPI.Time.DeltaTime;
+            updated = true;
+        }
+        if (playerComponent.InvulnDelta > 0)
+        {
+            playerComponent.InvulnDelta -= SystemAPI.Time.DeltaTime;
+            updated = true;
+        }
+        if (updated)
+        {
             entityCommandBuffer.SetComponent(playerEntity, playerComponent);
             entityCommandBuffer.Playback(entityManager);
             return;

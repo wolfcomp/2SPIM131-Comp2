@@ -28,4 +28,6 @@ public partial struct ShotSystem : ISystem
         }
         entityCommandBuffer.Playback(entityManager);
     }
+
+
 }

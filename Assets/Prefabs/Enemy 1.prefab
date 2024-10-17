@@ -10,10 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 994615512081018903}
   - component: {fileID: 6816630530508867328}
-  - component: {fileID: 2402704261287976108}
-  - component: {fileID: 4359462412632637283}
+  - component: {fileID: -2835471092622317706}
+  - component: {fileID: 1745164179935973411}
   m_Layer: 0
-  m_Name: Enemy
+  m_Name: Enemy 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -76,7 +76,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 100
   m_Sprite: {fileID: -1347695325, guid: a8bab4c9a670d8346a8f12ff5606f65b, type: 3}
-  m_Color: {r: 0.99768835, g: 0.8254717, b: 1, a: 1}
+  m_Color: {r: 0.990566, g: 0.6555199, b: 0.630785, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -86,7 +86,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &2402704261287976108
+--- !u!114 &-2835471092622317706
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -229,7 +229,7 @@ MonoBehaviour:
         Tag07: 0
     m_SerializedVersion: 1
   m_SerializedVersion: 1
---- !u!114 &4359462412632637283
+--- !u!114 &1745164179935973411
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

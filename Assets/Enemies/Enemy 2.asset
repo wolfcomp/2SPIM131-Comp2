@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5cd732ca977d4c54aab7d5350d987e54, type: 3}
-  m_Name: Enemy
+  m_Name: Enemy 2
   m_EditorClassIdentifier: 
-  Prefab: {fileID: 6687346616718371050, guid: 37d94822516921c44a65ef092041adbd, type: 3}
+  Prefab: {fileID: 6687346616718371050, guid: f4d3a70578480fa49ba65c4369155c99, type: 3}
   Health: 1
   Damage: 1
   MoveSpeed: 1

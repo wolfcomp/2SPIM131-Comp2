@@ -55,9 +55,12 @@ public partial class EnemySpawnerSystem : SystemBase
         {
             Position = GetPositionOutsideOfCameraRange(),
             Rotation = quaternion.identity,
-            Scale = 1
+            Scale = 0.8f
         });
+        EntityManager.AddComponentData(newEnemy, availableEnemies[index]);
 
+        EntityManager.AddComponentData(newEnemy, new Enemy());
+        EntityManager.AddComponentData(newEnemy, new HealthComponent { Health = availableEnemies[index].Health, MaxHealth = availableEnemies[index].Health });
 
         NextSpawnTime = (float)SystemAPI.Time.ElapsedTime + enemySpawnerComponent.SpawnCooldown;
     }
