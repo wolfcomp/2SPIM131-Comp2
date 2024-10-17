@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using Unity.Entities;
 using UnityEngine;
@@ -17,8 +18,9 @@ public class HotbarUIBehaviour : MonoBehaviour
 
     private readonly Dictionary<int, HotbarSlotUIBehaviour> _hotbarSlots = new();
     
-    void Start()
+    IEnumerator Start()
     {
+        yield return new WaitForSecondsRealtime(0.1f);
         var entitySystem = World.DefaultGameObjectInjectionWorld.GetOrCreateSystemManaged<HotbarUIInventorySystem>();
         entitySystem.AttachUI(this);
     }
