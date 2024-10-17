@@ -33,6 +33,7 @@ public class PlayerAuthoring : MonoBehaviour
             });
             var inventory = InventoryComponent.CreateDefault();
             AddComponent(entity, inventory);
+            AddComponent(entity, new InputComponent());
         }
     }
 }

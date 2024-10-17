@@ -1,5 +1,7 @@
 ﻿using Unity.Entities;
+using Unity.Physics.Systems;
 
+[UpdateInGroup(typeof(PhysicsSystemGroup))]
 [UpdateAfter(typeof(InputSystem))]
 public partial class LootSystem : SystemBase
 {
