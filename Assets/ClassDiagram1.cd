@@ -1,0 +1,621 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
+  <Class Name="EnemySpawnerAuthoring">
+    <Position X="24" Y="22.75" Width="2" />
+    <NestedTypes>
+      <Class Name="EnemySpawnerAuthoring.EnemySpawnerBaker" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Assets\Scripts\Authors\EnemySpawnerAuthoring.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABQAAAIAA=</HashCode>
+      <FileName>Assets\Scripts\Authors\EnemySpawnerAuthoring.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Field Name="EnemiesSOList" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="InventoryContainerAuthoring">
+    <Position X="18.25" Y="2.25" Width="2.25" />
+    <NestedTypes>
+      <Class Name="InventoryContainerAuthoring.Baker" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Assets\Scripts\Authors\InventoryContainerAuthoring.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAiAAAAAAAAAgAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Authors\InventoryContainerAuthoring.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="InventoryType" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Field Name="Items" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="LootAuthoring">
+    <Position X="20.5" Y="5.25" Width="1.5" />
+    <NestedTypes>
+      <Class Name="LootAuthoring.Baker" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Assets\Scripts\Authors\LootAuthoring.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAiAAAAAAAAAgAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Authors\LootAuthoring.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="InventoryType" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Field Name="Items" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="PlayerAuthoring">
+    <Position X="35.25" Y="8.75" Width="2" />
+    <NestedTypes>
+      <Class Name="PlayerAuthoring.Baker" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Assets\Scripts\Authors\PlayerAuthoring.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAIAAACAAAAAAAAAAAAAAAAAAAAAAAAAAQAAA=</HashCode>
+      <FileName>Assets\Scripts\Authors\PlayerAuthoring.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ShotAuthoring">
+    <Position X="27" Y="2.5" Width="1.5" />
+    <NestedTypes>
+      <Class Name="ShotAuthoring.Baker" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Assets\Scripts\Authors\ShotAuthoring.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Authors\ShotAuthoring.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EnemyContainerComponent" BaseTypeListCollapsed="true">
+    <Position X="9.5" Y="14.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Components\EnemyContainerComponent.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Field Name="enemies" />
+    </ShowAsCollectionAssociation>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Input">
+    <Position X="27" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAQAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Player\Input.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Movement">
+    <Position X="37.5" Y="0.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAEIIAAAAWAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Player\Movement.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PlayerController">
+    <Position X="35.25" Y="6.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAgIAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAEA=</HashCode>
+      <FileName>Assets\Scripts\Player\PlayerController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="InputSystem">
+    <Position X="17" Y="24" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAEAAAA=</HashCode>
+      <FileName>Assets\Scripts\Player\PlayerMovementDots\InputSystem.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_Input" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="MovementAuthoring">
+    <Position X="27" Y="2.5" Width="2" />
+    <NestedTypes>
+      <Class Name="MovementAuthoring.MovementAuthoringBaker" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Assets\Scripts\Player\PlayerMovementDots\MovementAuthoring.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAABAIAABAAAAAAAEAAAAAAAAAAAAgAAEAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Player\PlayerMovementDots\MovementAuthoring.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EnemySO">
+    <Position X="21" Y="22.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAACACAAAAAABAAAgAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\ScriptableObjects\EnemySO.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ItemComponentScriptableObject">
+    <Position X="22" Y="2.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAAAAAAAgAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\ScriptableObjects\ItemComponentScriptableObject.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EnemySpawnerSystem">
+    <Position X="11" Y="17" Width="5.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQAAAAAAAAAAAAAAACgAAAQAAAQAAQkYAAA=</HashCode>
+      <FileName>Assets\Scripts\Systems\EnemySpawnerSystem.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="enemyContainerComponent" />
+      <Field Name="enemySpawnerComponent" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="HealthSystem">
+    <Position X="10.75" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAECAAA=</HashCode>
+      <FileName>Assets\Scripts\Systems\HealthSystem.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_healthBehaviour" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="HotbarUIInventorySystem">
+    <Position X="1.25" Y="9.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAIAECAAA=</HashCode>
+      <FileName>Assets\Scripts\Systems\HotbarUIInventorySystem.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_hotbarCanvas" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="LootSystem">
+    <Position X="27" Y="6.75" Width="3.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAACAAAAQAAAAAAAEAAAA=</HashCode>
+      <FileName>Assets\Scripts\Systems\LootSystem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PickupSystem">
+    <Position X="29.25" Y="0.5" Width="5.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAAAAAAAQAAAAAACAAAAQAAAAAAAEAAAA=</HashCode>
+      <FileName>Assets\Scripts\Systems\PickupSystem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HealthBehaviour">
+    <Position X="11.25" Y="3.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>CAAACAACACAAAQAAAACAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\UI\HealthBehaviour.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_heartPrefab" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Field Name="_hearts" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="HeartBehaviour">
+    <Position X="14.5" Y="3.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAAAAAAAQgAAAAAAAIAAAAAAAQAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\UI\HeartBehaviour.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HotbarSlotUIBehaviour">
+    <Position X="8" Y="9.25" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAgAAIAAAAEAAAAAQAAIAACAAAAAgAA=</HashCode>
+      <FileName>Assets\Scripts\UI\HotbarSlotUIBehaviour.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HotbarUIBehaviour">
+    <Position X="4.25" Y="9" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAACAACAAAAIAAAgAAAAAAgACAAAAAIAAAAAg=</HashCode>
+      <FileName>Assets\Scripts\UI\HotbarUIBehaviour.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_hotbarSlot" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Field Name="_hotbarSlots" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="MeshExport">
+    <Position X="34.75" Y="0.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAACAAAAAAAAAAAAAAABABAAAAAAAAAAEAAEA=</HashCode>
+      <FileName>Assets\Scripts\MeshExport.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Unity.Physics.Stateful.StatefulCollisionEventBufferAuthoring">
+    <Position X="36" Y="3.25" Width="2.75" />
+    <NestedTypes>
+      <Class Name="Unity.Physics.Stateful.StatefulCollisionEventBufferAuthoring.StatefulCollisionEventBufferBaker" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Assets\Scripts\Stateful\StatefulCollisionEventBufferAuthoring.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIA=</HashCode>
+      <FileName>Assets\Scripts\Stateful\StatefulCollisionEventBufferAuthoring.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Unity.Physics.Stateful.StatefulEventCollectionJobs">
+    <Position X="35.5" Y="5" Width="2.25" />
+    <NestedTypes>
+      <Struct Name="Unity.Physics.Stateful.StatefulEventCollectionJobs.CollectTriggerEvents" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Assets\Scripts\Stateful\StatefulJobs.cs</NewMemberFileName>
+        </TypeIdentifier>
+        <Lollipop Position="0.2" />
+      </Struct>
+      <Struct Name="Unity.Physics.Stateful.StatefulEventCollectionJobs.CollectCollisionEvents" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Assets\Scripts\Stateful\StatefulJobs.cs</NewMemberFileName>
+        </TypeIdentifier>
+        <Lollipop Position="0.2" />
+      </Struct>
+      <Struct Name="Unity.Physics.Stateful.StatefulEventCollectionJobs.CollectCollisionEventsWithDetails" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Assets\Scripts\Stateful\StatefulJobs.cs</NewMemberFileName>
+        </TypeIdentifier>
+        <Lollipop Position="0.2" />
+      </Struct>
+      <Struct Name="Unity.Physics.Stateful.StatefulEventCollectionJobs.ConvertEventStreamToDynamicBufferJob&lt;T, C&gt;" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Assets\Scripts\Stateful\StatefulJobs.cs</NewMemberFileName>
+        </TypeIdentifier>
+        <Lollipop Position="0.2" />
+      </Struct>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Stateful\StatefulJobs.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Unity.Physics.Stateful.StatefulTriggerEventBufferAuthoring">
+    <Position X="33" Y="3.25" Width="2.75" />
+    <NestedTypes>
+      <Class Name="Unity.Physics.Stateful.StatefulTriggerEventBufferAuthoring.Baker" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Assets\Scripts\Stateful\StatefulTriggerEventBufferAuthoring.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Stateful\StatefulTriggerEventBufferAuthoring.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="@PlayerInputAction" Collapsed="true">
+    <Position X="17" Y="22.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AIACAAAAACAAIBAiAAKECRAJYAIXBGAUAGEgJFhQAMA=</HashCode>
+      <FileName>Assets\Scripts\Player\PlayerInputAction.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Struct Name="PlayerInventoryAspect" BaseTypeListCollapsed="true">
+    <Position X="29.25" Y="9" Width="3.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAQAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Aspects\PlayerInventoryAspect.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Struct>
+  <Struct Name="EnemyData">
+    <Position X="9.25" Y="21" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAACACAAAAAABAAAgAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Components\EnemyContainerComponent.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="EnemySpawnerComponent" BaseTypeListCollapsed="true">
+    <Position X="12.5" Y="21.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAIAA=</HashCode>
+      <FileName>Assets\Scripts\Components\EnemySpawnerComponent.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Struct>
+  <Struct Name="HealthComponent" BaseTypeListCollapsed="true">
+    <Position X="37.5" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Components\HealthComponent.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Struct>
+  <Struct Name="InventoryComponent" BaseTypeListCollapsed="true">
+    <Position X="18.5" Y="8.25" Width="3.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAgAAAAABAAIgAAAAAAAAAgAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Components\InventoryComponent.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="Containers" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Struct>
+  <Struct Name="InventoryContainerComponent" BaseTypeListCollapsed="true">
+    <Position X="13.5" Y="8.75" Width="3.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQAAACAgAAAAAAAgIAAABAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Components\InventoryContainerComponent.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="InventoryType" />
+      <Field Name="Items" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Struct>
+  <Struct Name="InventoryItemComponent" BaseTypeListCollapsed="true">
+    <Position X="13" Y="12.25" Width="4.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAQAAAAAAAgAAAAAQAAAAAAIAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Components\InventoryItemComponent.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="Name" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Struct>
+  <Struct Name="Loot" BaseTypeListCollapsed="true">
+    <Position X="31.25" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Components\LootComponent.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Struct>
+  <Struct Name="LootComponent" BaseTypeListCollapsed="true">
+    <Position X="33" Y="5.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Components\LootComponent.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Struct>
+  <Struct Name="Player" BaseTypeListCollapsed="true">
+    <Position X="37.5" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Components\PlayerComponent.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Struct>
+  <Struct Name="PlayerComponent" BaseTypeListCollapsed="true">
+    <Position X="33.25" Y="8.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAIAAAAAAAAAAAgAAIAAAAAAAAAAAAAAAQAAE=</HashCode>
+      <FileName>Assets\Scripts\Components\PlayerComponent.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Struct>
+  <Struct Name="ShotComponent" BaseTypeListCollapsed="true">
+    <Position X="27.5" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAABAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAEAAA=</HashCode>
+      <FileName>Assets\Scripts\Components\ShotComponent.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Struct>
+  <Struct Name="Utf16StringComponent">
+    <Position X="22.75" Y="11.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AABAAIAAAAAAAABECEAAAABIAABAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Components\Utf8StringComponent.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="InputComponent" BaseTypeListCollapsed="true">
+    <Position X="19.25" Y="14" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAQAAAIAAAAAAAAAAAAAAAAACAAAAAAAAgAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Player\PlayerMovementDots\InputComponent.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Struct>
+  <Struct Name="MovementComponent" BaseTypeListCollapsed="true">
+    <Position X="23.25" Y="17" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAABAIAABAAAAAAAEAAAAAAAAAAAAgAAEAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Player\PlayerMovementDots\MovementAuthoring.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Struct>
+  <Struct Name="MovementSystem" BaseTypeListCollapsed="true">
+    <Position X="19.25" Y="17" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIAIABAAAAAAAAAAAAICAAgAQAEAACAgEAAAA=</HashCode>
+      <FileName>Assets\Scripts\Player\PlayerMovementDots\MovementSystem.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_inputComponent" />
+      <Field Name="_movementComponent" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Struct>
+  <Struct Name="InventorySystem" BaseTypeListCollapsed="true">
+    <Position X="29.25" Y="3" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAEAAAA=</HashCode>
+      <FileName>Assets\Scripts\Systems\InventorySystem.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Struct>
+  <Struct Name="PlayerShotSystem" BaseTypeListCollapsed="true">
+    <Position X="29.25" Y="4.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAEAAAA=</HashCode>
+      <FileName>Assets\Scripts\Systems\PlayerShotSystem.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Struct>
+  <Struct Name="ShotSystem" BaseTypeListCollapsed="true">
+    <Position X="27.25" Y="5.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAA=</HashCode>
+      <FileName>Assets\Scripts\Systems\ShotSystem.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Struct>
+  <Struct Name="Unity.Physics.Stateful.StatefulCollisionEventDetails" BaseTypeListCollapsed="true">
+    <Position X="31" Y="7.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIA=</HashCode>
+      <FileName>Assets\Scripts\Stateful\StatefulCollisionEventBufferAuthoring.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Struct>
+  <Struct Name="Unity.Physics.Stateful.StatefulCollisionEvent" BaseTypeListCollapsed="true">
+    <Position X="6.75" Y="2.25" Width="2" />
+    <NestedTypes>
+      <Struct Name="Unity.Physics.Stateful.StatefulCollisionEvent.Details" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Assets\Scripts\Stateful\StatefulCollisionEventBufferAuthoring.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Struct>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAgAAAAAQAAABEAAAAQCQIACAAgAQABAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Stateful\StatefulCollisionEventBufferAuthoring.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="State" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Struct>
+  <Struct Name="Unity.Physics.Stateful.StatefulCollisionEventBufferSystem" BaseTypeListCollapsed="true">
+    <Position X="0.5" Y="14.5" Width="2.75" />
+    <NestedTypes>
+      <Struct Name="Unity.Physics.Stateful.StatefulCollisionEventBufferSystem.DummyExcludeComponent" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Assets\Scripts\Stateful\StatefulCollisionEventBufferSystem.cs</NewMemberFileName>
+        </TypeIdentifier>
+        <Lollipop Position="0.2" />
+      </Struct>
+      <Struct Name="Unity.Physics.Stateful.StatefulCollisionEventBufferSystem.ComponentHandles" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Assets\Scripts\Stateful\StatefulCollisionEventBufferSystem.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Struct>
+      <Struct Name="Unity.Physics.Stateful.StatefulCollisionEventBufferSystem.ClearCollisionEventDynamicBufferJob" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Assets\Scripts\Stateful\StatefulCollisionEventBufferSystem.cs</NewMemberFileName>
+        </TypeIdentifier>
+        <Lollipop Position="0.2" />
+      </Struct>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAAAAAAAIAAAAAEAAACAAAAAAAAAAAAEAAAA=</HashCode>
+      <FileName>Assets\Scripts\Stateful\StatefulCollisionEventBufferSystem.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="m_StateFulEventBuffers" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Struct>
+  <Struct Name="Unity.Physics.Stateful.StatefulSimulationEventBuffers&lt;T&gt;">
+    <Position X="4.5" Y="14.75" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQCAAAgAAAACAAAAAAAAAAgAAAAAAAAAAIAA=</HashCode>
+      <FileName>Assets\Scripts\Stateful\StatefulSimulationEventBuffers.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="Unity.Physics.Stateful.StatefulTriggerEvent" BaseTypeListCollapsed="true">
+    <Position X="0.75" Y="3" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAgAAAAAQAAAAEAAAAACQAAAAAgAQABAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Stateful\StatefulTriggerEventBufferAuthoring.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="State" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Struct>
+  <Struct Name="Unity.Physics.Stateful.StatefulTriggerEventExclude" BaseTypeListCollapsed="true">
+    <Position X="33" Y="4.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Stateful\StatefulTriggerEventBufferAuthoring.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Struct>
+  <Struct Name="Unity.Physics.Stateful.StatefulTriggerEventBufferSystem" BaseTypeListCollapsed="true">
+    <Position X="4.25" Y="18.25" Width="3.25" />
+    <NestedTypes>
+      <Struct Name="Unity.Physics.Stateful.StatefulTriggerEventBufferSystem.ComponentHandles" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Assets\Scripts\Stateful\StatefulTriggerEventBufferSystem.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Struct>
+      <Struct Name="Unity.Physics.Stateful.StatefulTriggerEventBufferSystem.ClearTriggerEventDynamicBufferJob" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Assets\Scripts\Stateful\StatefulTriggerEventBufferSystem.cs</NewMemberFileName>
+        </TypeIdentifier>
+        <Lollipop Position="0.2" />
+      </Struct>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAIBAAAAAAAAAAAIAAAAAAAAACAAAAAAAAAAAAEAAgA=</HashCode>
+      <FileName>Assets\Scripts\Stateful\StatefulTriggerEventBufferSystem.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="m_StateFulEventBuffers" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Struct>
+  <Interface Name="Unity.Physics.Stateful.IStatefulSimulationEvent&lt;T&gt;">
+    <Position X="3.75" Y="1.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Stateful\IStatefulSimulationEvent.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="State" />
+    </ShowAsAssociation>
+  </Interface>
+  <Enum Name="InventoryType">
+    <Position X="17.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACAEACABwAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Components\InventoryComponent.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="CollisionLayers">
+    <Position X="31.25" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAAAABAAAAAAAAAAIAAAAAAgAAAAAAAAAQAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Player\PlayerMovementDots\CollisionLayers.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Unity.Physics.Stateful.StatefulEventState">
+    <Position X="4" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAQIAAAAAAAACA=</HashCode>
+      <FileName>Assets\Scripts\Stateful\IStatefulSimulationEvent.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
