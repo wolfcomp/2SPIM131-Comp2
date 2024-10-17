@@ -1,6 +1,5 @@
 using Unity.Entities;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 public class MovementAuthoring : MonoBehaviour
 {
@@ -15,7 +14,7 @@ public class MovementAuthoring : MonoBehaviour
     {
         public override void Bake(MovementAuthoring authoring)
         {
-            Entity playerAuthoring = GetEntity(TransformUsageFlags.Dynamic);
+            var playerAuthoring = GetEntity(TransformUsageFlags.Dynamic);
             AddComponent(playerAuthoring, new MovementComponent{
                 MoveSpeed = authoring.MoveSpeed, 
                 MoveMultiplier = authoring.MoveMultiplier, 

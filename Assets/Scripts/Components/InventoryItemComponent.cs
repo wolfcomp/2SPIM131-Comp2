@@ -13,9 +13,9 @@ public struct InventoryItemComponent : IComponentData
     {
         var ret = (InventoryItemComponent*)Marshal.AllocHGlobal(sizeof(InventoryItemComponent) * size);
         var span = new Span<InventoryItemComponent>(ret, size);
-        for (var _index = 0; _index < span.Length; _index++)
+        for (var i = 0; i < span.Length; i++)
         {
-            span[_index].Count = span[_index].ItemId = 0;
+            span[i].Count = span[i].ItemId = 0;
         }
 
         return ret;

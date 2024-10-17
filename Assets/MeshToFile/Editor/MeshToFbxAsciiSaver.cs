@@ -1,8 +1,5 @@
 using UnityEngine;
 using UnityEditor;
-using System.Collections;
-using System.Collections.Generic;
-using Pinwheel.MeshToFile;
 using System.Text;
 using System;
 using System.IO;

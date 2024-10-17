@@ -1,8 +1,7 @@
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "Enemy", menuName = "ScriptableObjects/Enemy")]
-
-public class EnemySO : ScriptableObject
+public class EnemySo : ScriptableObject
 {
     public GameObject Prefab;
     public byte Health;

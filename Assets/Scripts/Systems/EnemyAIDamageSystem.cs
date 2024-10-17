@@ -2,13 +2,16 @@
 using Unity.Entities;
 using Unity.Physics.Stateful;
 using Unity.Physics.Systems;
-using UnityEditor;
+#if !UNITY_EDITOR
 using UnityEngine;
+#else
+using UnityEditor;
+#endif
 
 [UpdateInGroup(typeof(PhysicsSystemGroup))]
 [UpdateAfter(typeof(StatefulTriggerEventBufferSystem))]
 [UpdateAfter(typeof(PlayerShotSystem))]
-public partial class EnemyAIDamageSystem : SystemBase
+public partial class EnemyAiDamageSystem : SystemBase
 {
     private EndFixedStepSimulationEntityCommandBufferSystem _commandBufferSystem;
     private EntityQuery _nonTriggerPlayerQuery;

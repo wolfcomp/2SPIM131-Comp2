@@ -866,7 +866,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Emoji_Spritesheet_Free_36
+      name: Questionmark
       rect:
         serializedVersion: 2
         x: 96
@@ -1913,7 +1913,6 @@ TextureImporter:
       Emoji_Spritesheet_Free_33: 1586216426
       Emoji_Spritesheet_Free_34: -1012803734
       Emoji_Spritesheet_Free_35: -1116778675
-      Emoji_Spritesheet_Free_36: 1079614602
       Emoji_Spritesheet_Free_37: 46991961
       Emoji_Spritesheet_Free_38: 1649000425
       Emoji_Spritesheet_Free_39: -505325489
@@ -1958,6 +1957,7 @@ TextureImporter:
       Emoji_Spritesheet_Free_87: -175617570
       Empty: 2132329125
       Leaf: -993419028
+      Questionmark: 1079614602
       Round_Cry: 918553559
       Round_Dead: -169761844
       Round_Excited: 1778211556

@@ -49,11 +49,11 @@ namespace Unity.Physics.Stateful
 
             statefulEvents.Clear();
 
-            int c = 0;
-            int p = 0;
+            var c = 0;
+            var p = 0;
             while (c < currentEvents.Length && p < previousEvents.Length)
             {
-                int r = previousEvents[p].CompareTo(currentEvents[c]);
+                var r = previousEvents[p].CompareTo(currentEvents[c]);
                 if (r == 0)
                 {
                     var currentEvent = currentEvents[c];

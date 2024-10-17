@@ -12,4 +12,5 @@ public struct PlayerComponent : IComponentData
     public float ShotDelta;
     public Entity ShotPrefab;
     public float ShotCooldown;
+    public bool IsRapid;
 }

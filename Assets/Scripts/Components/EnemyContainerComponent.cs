@@ -4,7 +4,7 @@ using Unity.Entities;
 
 public class EnemyContainerComponent : IComponentData
 {
-    public List<EnemyData> enemies;
+    public List<EnemyData> Enemies;
 }
 
 public struct EnemyData : IComponentData

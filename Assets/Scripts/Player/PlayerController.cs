@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(Input))]
@@ -8,6 +6,7 @@ public class PlayerController : MonoBehaviour
 {
     private Input _input;
     private Movement _movement;
+
     private void Awake() {
         _movement = GetComponent<Movement>();
         _input = GetComponent<Input>();
@@ -20,6 +19,6 @@ public class PlayerController : MonoBehaviour
         //    if (_input.moveMainVector.x == 0 && _input.moveMainVector.y == 0) 
         //        return;
         //}
-        _movement.Move(_input.moveVector);
+        _movement.Move(_input.MoveVector);
     }
 }

@@ -1,26 +1,23 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class MeshExport : MonoBehaviour
 {
-    private CompositeCollider2D Collider2D;
-    private MeshFilter Filter;
+    private CompositeCollider2D _collider2D;
+    private MeshFilter _filter;
 
-    public Mesh mesh;
+    public Mesh Mesh;
     
     // Start is called before the first frame update
     private void Awake()
     {
-        Collider2D = GetComponent<CompositeCollider2D>();
-        Filter = GetComponent<MeshFilter>();
+        _collider2D = GetComponent<CompositeCollider2D>();
+        _filter = GetComponent<MeshFilter>();
     }
 
     void Start()
     {
-        mesh = Collider2D.CreateMesh(true, true);
-        Filter.mesh = mesh;
+        Mesh = _collider2D.CreateMesh(true, true);
+        _filter.mesh = Mesh;
     }
 
     // Update is called once per frame

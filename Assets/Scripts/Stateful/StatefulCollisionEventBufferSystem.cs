@@ -15,8 +15,8 @@ namespace Unity.Physics.Stateful
     [UpdateAfter(typeof(PhysicsSimulationGroup))]
     public partial struct StatefulCollisionEventBufferSystem : ISystem
     {
-        private StatefulSimulationEventBuffers<StatefulCollisionEvent> m_StateFulEventBuffers;
-        private ComponentHandles m_Handles;
+        private StatefulSimulationEventBuffers<StatefulCollisionEvent> _mStateFulEventBuffers;
+        private ComponentHandles _mHandles;
 
         // Component that does nothing. Made in order to use a generic job. See OnUpdate() method for details.
         internal struct DummyExcludeComponent : IComponentData {};
@@ -45,17 +45,17 @@ namespace Unity.Physics.Stateful
         [BurstCompile]
         public void OnCreate(ref SystemState state)
         {
-            m_StateFulEventBuffers = new StatefulSimulationEventBuffers<StatefulCollisionEvent>();
-            m_StateFulEventBuffers.AllocateBuffers();
+            _mStateFulEventBuffers = new StatefulSimulationEventBuffers<StatefulCollisionEvent>();
+            _mStateFulEventBuffers.AllocateBuffers();
             state.RequireForUpdate<StatefulCollisionEvent>();
 
-            m_Handles = new ComponentHandles(ref state);
+            _mHandles = new ComponentHandles(ref state);
         }
 
         [BurstCompile]
         public void OnDestroy(ref SystemState state)
         {
-            m_StateFulEventBuffers.Dispose();
+            _mStateFulEventBuffers.Dispose();
         }
 
         [BurstCompile]
@@ -67,22 +67,22 @@ namespace Unity.Physics.Stateful
         [BurstCompile]
         public void OnUpdate(ref SystemState state)
         {
-            m_Handles.Update(ref state);
+            _mHandles.Update(ref state);
 
             state.Dependency = new ClearCollisionEventDynamicBufferJob()
                 .ScheduleParallel(state.Dependency);
 
-            m_StateFulEventBuffers.SwapBuffers();
+            _mStateFulEventBuffers.SwapBuffers();
 
-            var currentEvents = m_StateFulEventBuffers.Current;
-            var previousEvents = m_StateFulEventBuffers.Previous;
+            var currentEvents = _mStateFulEventBuffers.Current;
+            var previousEvents = _mStateFulEventBuffers.Previous;
 
             state.Dependency = new StatefulEventCollectionJobs.
                 CollectCollisionEventsWithDetails
             {
                 CollisionEvents = currentEvents,
                 PhysicsWorld = SystemAPI.GetSingleton<PhysicsWorldSingleton>().PhysicsWorld,
-                EventDetails = m_Handles.EventDetails
+                EventDetails = _mHandles.EventDetails
             }.Schedule(SystemAPI.GetSingleton<SimulationSingleton>(), state.Dependency);
 
 
@@ -91,10 +91,10 @@ namespace Unity.Physics.Stateful
             {
                 CurrentEvents = currentEvents,
                 PreviousEvents = previousEvents,
-                EventLookup = m_Handles.EventBuffers,
+                EventLookup = _mHandles.EventBuffers,
 
                 UseExcludeComponent = false,
-                EventExcludeLookup = m_Handles.EventExcludes
+                EventExcludeLookup = _mHandles.EventExcludes
             }.Schedule(state.Dependency);
         }
     }

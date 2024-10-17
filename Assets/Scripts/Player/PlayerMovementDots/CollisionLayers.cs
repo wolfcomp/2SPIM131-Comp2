@@ -1,4 +1,3 @@
-
 public enum CollisionLayers 
 {
     Default = 1 << 0,

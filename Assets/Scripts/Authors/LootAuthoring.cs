@@ -1,6 +1,5 @@
 ﻿using System;
 using Unity.Entities;
-using Unity.Physics.Stateful;
 using UnityEngine;
 
 public class LootAuthoring : MonoBehaviour

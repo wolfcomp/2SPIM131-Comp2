@@ -34,7 +34,7 @@ namespace Unity.Physics.Stateful
                 var statefulCollisionEvent = new StatefulCollisionEvent(collisionEvent);
 
                 // Check if we should calculate the collision details
-                bool calculateDetails = ForceCalculateDetails;
+                var calculateDetails = ForceCalculateDetails;
                 if (!calculateDetails && EventDetails.HasComponent(collisionEvent.EntityA))
                 {
                     calculateDetails = EventDetails[collisionEvent.EntityA].CalculateDetails;
@@ -57,16 +57,16 @@ namespace Unity.Physics.Stateful
         }
 
         [BurstCompile]
-        public struct ConvertEventStreamToDynamicBufferJob<T, C> : IJob
+        public struct ConvertEventStreamToDynamicBufferJob<T, TC> : IJob
             where T : unmanaged, IBufferElementData, IStatefulSimulationEvent<T>
-            where C : unmanaged, IComponentData
+            where TC : unmanaged, IComponentData
         {
             public NativeList<T> PreviousEvents;
             public NativeList<T> CurrentEvents;
             public BufferLookup<T> EventLookup;
 
             public bool UseExcludeComponent;
-            [ReadOnly] public ComponentLookup<C> EventExcludeLookup;
+            [ReadOnly] public ComponentLookup<TC> EventExcludeLookup;
 
             public void Execute()
             {
@@ -74,7 +74,7 @@ namespace Unity.Physics.Stateful
 
                 StatefulSimulationEventBuffers<T>.GetStatefulEvents(PreviousEvents, CurrentEvents, statefulEvents);
 
-                for (int i = 0; i < statefulEvents.Length; i++)
+                for (var i = 0; i < statefulEvents.Length; i++)
                 {
                     var statefulEvent = statefulEvents[i];
 

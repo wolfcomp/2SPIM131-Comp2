@@ -1,5 +1,4 @@
-﻿using System;
-using Unity.Entities;
+﻿using Unity.Entities;
 
 [UpdateAfter(typeof(InputSystem))]
 public partial class LootSystem : SystemBase
@@ -23,9 +22,9 @@ public partial class LootSystem : SystemBase
         foreach (var (lootContainer, loot, lootEntity) in SystemAPI.Query<RefRO<InventoryContainerComponent>, RefRO<LootComponent>>().WithEntityAccess())
         {
             if(!loot.ValueRO.IsInPickupRange) continue;
-            foreach (var _inventoryItemComponent in lootContainer.ValueRO.ItemsSpan)
+            foreach (var inventoryItemComponent in lootContainer.ValueRO.ItemsSpan)
             {
-                inventoryComponent.ValueRW.AddItem(_inventoryItemComponent);
+                inventoryComponent.ValueRW.AddItem(inventoryItemComponent);
             }
             _commandBufferSystem.CreateCommandBuffer().DestroyEntity(lootEntity);
         }

@@ -15,11 +15,11 @@ public unsafe struct InventoryContainerComponent : IComponentData
     {
         var ret = (InventoryContainerComponent*)Marshal.AllocHGlobal(sizeof(InventoryContainerComponent) * size);
         var span = new Span<InventoryContainerComponent>(ret, size);
-        for (var _index = 0; _index < span.Length; _index++)
+        for (var i = 0; i < span.Length; i++)
         {
-            span[_index].ItemsCount = 0;
-            span[_index].InventoryType = InventoryType.Invalid;
-            span[_index].Items = null;
+            span[i].ItemsCount = 0;
+            span[i].InventoryType = InventoryType.Invalid;
+            span[i].Items = null;
         }
 
         return ret;

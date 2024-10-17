@@ -1,36 +1,35 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using Unity.Entities;
 using Unity.Mathematics;
-using Unity.Physics;
 using UnityEngine;
 
 public partial class InputSystem : SystemBase
 {
-    private PlayerInputAction _Input;
+    private PlayerInputAction _input;
+
     protected override void OnCreate()
     {
         if (!SystemAPI.TryGetSingleton(out InputComponent _inputComponent))
             EntityManager.CreateEntity(typeof(InputComponent));
-        _Input = new PlayerInputAction();
-        _Input.Enable();
+        _input = new PlayerInputAction();
+        _input.Enable();
     }
 
     protected override void OnUpdate()
     {
-        Vector2 mVector = _Input.Player.Move.ReadValue<Vector2>();
-        bool inventory = _Input.Player.Inventory.WasPressedThisFrame();
-        bool didInteract = _Input.Player.Interact.WasPressedThisFrame();
-        bool isInteracting = _Input.Player.Interact.IsPressed();
-        bool isShooting = _Input.Player.Shoot.IsPressed();
+        var mVector = _input.Player.Move.ReadValue<Vector2>();
+        var inventory = _input.Player.Inventory.WasPressedThisFrame();
+        var didInteract = _input.Player.Interact.WasPressedThisFrame();
+        var isInteracting = _input.Player.Interact.IsPressed();
+        var isShooting = _input.Player.Shoot.IsPressed();
+        var rapidMode = _input.Player.RapidMode.WasPressedThisFrame();
         SystemAPI.SetSingleton(new InputComponent
         {
             MVector = (float2)mVector,
             DidInteract = didInteract,
             Inventory = inventory,
             IsInteracting = isInteracting,
-            IsShooting = isShooting
+            IsShooting = isShooting,
+            RapidMode = rapidMode
         });
     }
     

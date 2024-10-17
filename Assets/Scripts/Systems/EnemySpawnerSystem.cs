@@ -7,33 +7,41 @@ using UnityEngine;
 
 public partial class EnemySpawnerSystem : SystemBase
 {
-    private EnemySpawnerComponent enemySpawnerComponent;
-    private EnemyContainerComponent enemyContainerComponent;
-    private Entity enemySpawnerEntity;
-    private float NextSpawnTime;
-    private EndFixedStepSimulationEntityCommandBufferSystem _commandBufferSystem;
-    private Random random;
+    private EnemySpawnerComponent _enemySpawnerComponent;
+    private EnemyContainerComponent _enemyContainerComponent;
+    private Entity _enemySpawnerEntity;
+    private float _nextSpawnTime;
+    private Random _random;
+    private bool _isRapid;
 
     protected override void OnCreate()
     {
-
-        _commandBufferSystem = World.GetOrCreateSystemManaged<EndFixedStepSimulationEntityCommandBufferSystem>();
-        random = Random.CreateFromIndex((uint)enemySpawnerComponent.GetHashCode());
-        //random = Random.CreateFromIndex((uint)SystemAPI.Time.ElapsedTime.GetHashCode());
-
+        _random = Random.CreateFromIndex((uint)_enemySpawnerComponent.GetHashCode());
     }
 
     protected override void OnUpdate()
     {
-        if (!SystemAPI.TryGetSingletonEntity<EnemySpawnerComponent>(out enemySpawnerEntity))
+        if (!SystemAPI.TryGetSingletonEntity<EnemySpawnerComponent>(out _enemySpawnerEntity))
         {
             return;
         }
 
-        enemySpawnerComponent = EntityManager.GetComponentData<EnemySpawnerComponent>(enemySpawnerEntity);
-        enemyContainerComponent = EntityManager.GetComponentObject<EnemyContainerComponent>(enemySpawnerEntity);
+        _enemySpawnerComponent = EntityManager.GetComponentData<EnemySpawnerComponent>(_enemySpawnerEntity);
+        _enemyContainerComponent = EntityManager.GetComponentObject<EnemyContainerComponent>(_enemySpawnerEntity);
 
-        if (SystemAPI.Time.ElapsedTime > NextSpawnTime)
+        if (SystemAPI.TryGetSingletonEntity<InputComponent>(out var inputComponentEntity))
+        {
+            var inputComponent = EntityManager.GetComponentData<InputComponent>(inputComponentEntity);
+            if (inputComponent.RapidMode)
+            {
+                _isRapid = !_isRapid;
+                _enemySpawnerComponent.SpawnCooldown *= _isRapid ? 0.1f : 10;
+                _nextSpawnTime *= _isRapid ? 0.1f : 10;
+                EntityManager.SetComponentData(_enemySpawnerEntity, _enemySpawnerComponent);
+            }
+        }
+
+        if (SystemAPI.Time.ElapsedTime > _nextSpawnTime)
         {
             SpawnEnemy();
         }
@@ -41,16 +49,16 @@ public partial class EnemySpawnerSystem : SystemBase
 
     private void SpawnEnemy()
     {
-        List<EnemyData> availableEnemies = new List<EnemyData>();
+        var availableEnemies = new List<EnemyData>();
 
-        foreach (EnemyData enemyData in enemyContainerComponent.enemies)
+        foreach (var enemyData in _enemyContainerComponent.Enemies)
         {
             availableEnemies.Add(enemyData);
         }
 
-        int index = random.NextInt(availableEnemies.Count);
+        var index = _random.NextInt(availableEnemies.Count);
 
-        Entity newEnemy = EntityManager.Instantiate(availableEnemies[index].Prefab);
+        var newEnemy = EntityManager.Instantiate(availableEnemies[index].Prefab);
         EntityManager.SetComponentData(newEnemy, new LocalTransform
         {
             Position = GetPositionOutsideOfCameraRange(),
@@ -62,16 +70,16 @@ public partial class EnemySpawnerSystem : SystemBase
         EntityManager.AddComponentData(newEnemy, new Enemy());
         EntityManager.AddComponentData(newEnemy, new HealthComponent { Health = availableEnemies[index].Health, MaxHealth = availableEnemies[index].Health });
 
-        NextSpawnTime = (float)SystemAPI.Time.ElapsedTime + enemySpawnerComponent.SpawnCooldown;
+        _nextSpawnTime = (float)SystemAPI.Time.ElapsedTime + _enemySpawnerComponent.SpawnCooldown;
     }
 
     private float3 GetPositionOutsideOfCameraRange()
     {
-        var size = enemySpawnerComponent.CameraSize * 2;
-        float3 position = new float3(UnityEngine.Random.Range(-size.x, size.x), UnityEngine.Random.Range(-size.y, size.y), 0);
+        var size = _enemySpawnerComponent.CameraSize * 2;
+        var position = new float3(UnityEngine.Random.Range(-size.x, size.x), UnityEngine.Random.Range(-size.y, size.y), 0);
 
-        while (position.x < enemySpawnerComponent.CameraSize.x && position.x > -enemySpawnerComponent.CameraSize.x
-            && position.y < enemySpawnerComponent.CameraSize.y && position.y > -enemySpawnerComponent.CameraSize.y)
+        while (position.x < _enemySpawnerComponent.CameraSize.x && position.x > -_enemySpawnerComponent.CameraSize.x
+            && position.y < _enemySpawnerComponent.CameraSize.y && position.y > -_enemySpawnerComponent.CameraSize.y)
         {
             position = new float3(UnityEngine.Random.Range(-size.x, size.x), UnityEngine.Random.Range(-size.y, size.y), 0);
         }

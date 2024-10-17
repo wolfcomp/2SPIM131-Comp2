@@ -1,6 +1,6 @@
 using Unity.Entities;
-using UnityEngine;
 using Unity.Mathematics;
+
 public partial struct InputComponent : IComponentData
 {
     public float2 MVector;
@@ -8,4 +8,5 @@ public partial struct InputComponent : IComponentData
     public bool DidInteract;
     public bool Inventory;
     public bool IsShooting;
+    public bool RapidMode;
 }

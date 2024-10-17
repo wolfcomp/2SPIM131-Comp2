@@ -1,13 +1,9 @@
-using System.Collections;
-using System.Collections.Generic;
 using Unity.Burst;
-using Unity.Collections;
 using Unity.Entities;
 using Unity.Physics;
 using Unity.Mathematics;
 using UnityEngine;
 using Unity.Transforms;
-
 
 public partial struct MovementSystem : ISystem
 {
@@ -24,6 +20,7 @@ public partial struct MovementSystem : ISystem
     {
         state.RequireForUpdate<MovementComponent>();
     }
+
     private void OnUpdate(ref SystemState state)
     {
         _entityManager = state.EntityManager;
@@ -34,11 +31,11 @@ public partial struct MovementSystem : ISystem
         _inputComponent = _entityManager.GetComponentData<InputComponent>(_inputEntity);
 
         Move(ref state);
+        Drag(ref state);
         Interact(ref state);
         Inventory(ref state);
-
-
     }
+
     [BurstCompile]
     private void Move(ref SystemState state)
     {
@@ -51,6 +48,13 @@ public partial struct MovementSystem : ISystem
             transform.ValueRW.Rotation = Quaternion.identity;
         // update velocity
         physicsVelocity.ValueRW.Linear += new float3(_movementComponent.MoveMultiplier * _movementComponent.MoveSpeed * SystemAPI.Time.DeltaTime * _inputComponent.MVector, 0);
+    }
+
+    [BurstCompile]
+    private void Drag(ref SystemState state)
+    {
+        var physicsVelocity = SystemAPI.GetComponentRW<PhysicsVelocity>(_playerEntity);
+        physicsVelocity.ValueRW.Linear -= SystemAPI.Time.DeltaTime * _movementComponent.Drag * float4x4.identity.InverseTransformDirection(physicsVelocity.ValueRO.Linear);
     }
 
     private void Interact(ref SystemState state)
