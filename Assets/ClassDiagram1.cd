@@ -87,6 +87,11 @@
   </Class>
   <Class Name="EnemyContainerComponent" BaseTypeListCollapsed="true">
     <Position X="9.5" Y="14.5" Width="2.25" />
+    <AssociationLine Name="enemies" Type="EnemyData">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-0.926" Y="0.322" />
+      </MemberNameLabel>
+    </AssociationLine>
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAA=</HashCode>
       <FileName>Assets\Scripts\Components\EnemyContainerComponent.cs</FileName>
@@ -162,8 +167,8 @@
       <FileName>Assets\Scripts\Systems\EnemySpawnerSystem.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
-      <Field Name="enemyContainerComponent" />
       <Field Name="enemySpawnerComponent" />
+      <Field Name="enemyContainerComponent" />
     </ShowAsAssociation>
   </Class>
   <Class Name="HealthSystem">
@@ -316,6 +321,13 @@
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
+  <Class Name="EnemyAIDamageSystem">
+    <Position X="33.25" Y="11" Width="5.25" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAQAAAAAAAAQAAAAAAACAAAARAAAAAAAEAAAA=</HashCode>
+      <FileName>Assets\Scripts\Systems\EnemyAIDamageSystem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
   <Struct Name="PlayerInventoryAspect" BaseTypeListCollapsed="true">
     <Position X="29.25" Y="9" Width="3.75" />
     <TypeIdentifier>
@@ -330,6 +342,7 @@
       <HashCode>AAAACACAAAAAABAAAgAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Assets\Scripts\Components\EnemyContainerComponent.cs</FileName>
     </TypeIdentifier>
+    <Lollipop Position="0.2" />
   </Struct>
   <Struct Name="EnemySpawnerComponent" BaseTypeListCollapsed="true">
     <Position X="12.5" Y="21.25" Width="2.25" />
@@ -451,8 +464,8 @@
       <FileName>Assets\Scripts\Player\PlayerMovementDots\MovementSystem.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
-      <Field Name="_inputComponent" />
       <Field Name="_movementComponent" />
+      <Field Name="_inputComponent" />
     </ShowAsAssociation>
     <Lollipop Position="0.2" Collapsed="true" />
   </Struct>
@@ -585,6 +598,22 @@
       <Field Name="m_StateFulEventBuffers" />
     </ShowAsAssociation>
     <Lollipop Position="0.2" Collapsed="true" />
+  </Struct>
+  <Struct Name="EnemyAISystem">
+    <Position X="31.25" Y="11.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAA=</HashCode>
+      <FileName>Assets\Scripts\Systems\EnemyAISystem.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Struct>
+  <Struct Name="Enemy">
+    <Position X="29.5" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Components\Enemy.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
   </Struct>
   <Interface Name="Unity.Physics.Stateful.IStatefulSimulationEvent&lt;T&gt;">
     <Position X="3.75" Y="1.75" Width="2.25" />
